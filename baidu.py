@@ -1,4 +1,4 @@
-import urllib.response
+import urllib.request
 from bs4 import BeautifulSoup
 
 class Scraper:
@@ -6,7 +6,7 @@ class Scraper:
         self.site = site
 
     def scrape(self):
-        r = urllib.response.urlopen(self.site)
+        r = urllib.request.urlopen(self.site)
         html = r.read()
         parser = "html.parser"
         sp = BeautifulSoup(html,parser)
@@ -17,5 +17,5 @@ class Scraper:
             if "html" in url:
                 print("\n" + url)
 
-new = 'http://t1451test.1451cn.com/pat/#/patients/region/province-home/'
-Scraper(new).scrape()
+news = 'https://www.zhihu.com/'
+Scraper(news).scrape()
