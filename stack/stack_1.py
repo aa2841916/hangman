@@ -18,12 +18,19 @@ class Stack:
     def size(self):
         return len(self.item)
 
-stak = Stack()
-for c in 'Hello':
-    stak.push(c)
-resver = ""
-for i in range(5):
-    resver += stak.pop()
 
+# stack = Stack()
+# resever = []
+# for c in 'yesterday':
+#     stack.push(c)
+# for i in range(len(stack.item)):
+#     resever += stack.pop()
+# print(resever)
+stack = Stack()
+re = []
+for i in range(1,6):
+    stack.push(i)
+for i in range(len(stack.item)):
+    re.insert(0,stack.item[i])
 
-print()
+print(re)

@@ -29,11 +29,15 @@ class Queue:
         now = time.time()
         while now < t_end and not pq.is_empty():
             now = time.time()
-            r = random.randit(0,max_time)
+            r = random.randint(0,max_time)
             time.sleep(r)
             person = pq.dequeue()
             print(person)
             tix_sold.append(person)
 
         return tix_sold
+
+queue = Queue()
+sold = queue.simulate_line(5,4)
+print(sold)
 

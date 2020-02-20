@@ -15,10 +15,7 @@ class Queue:
         return len(self.item)
 
 a_queue = Queue()
-for i in range(5):
-    a_queue.enqueue(i)
-
-for i in range(5):
-    print(a_queue.dequeue())
+for c in range(1,6):
+    a_queue.enqueue(c)
 
 print(a_queue.item)
