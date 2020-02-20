@@ -27,7 +27,6 @@ class Queue:
 
         t_end = time.time() + till_show
         now = time.time()
-
         while now < t_end and not pq.is_empty():
             now = time.time()
             r = random.randit(0,max_time)
@@ -38,6 +37,3 @@ class Queue:
 
         return tix_sold
 
-queue = Queue()
-sold = queue.simulate_line(5,1)
-print(sold)
